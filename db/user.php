@@ -38,7 +38,7 @@
 
         public function getUser($username,$password){
             try{
-                $sql = "select * from users where username = :username AND password = :password ";
+                $sql = "SELECT * FROM users where username = :username AND password = :password ";
                 $stmt = $this->db->prepare($sql);
                 $stmt->bindparam(':username', $username);
                 $stmt->bindparam(':password', $password);
@@ -53,7 +53,7 @@
 
         public function getUserbyUsername($username){
             try{
-                $sql = "select count(*) as num from users where username = :username";
+                $sql = "SELECT count(*) as num from users where username = :username";
                 $stmt = $this->db->prepare($sql);
                 $stmt->bindparam(':username',$username);
                 
