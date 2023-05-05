@@ -4,10 +4,10 @@
     class SendEmail{
 
         public static function SendMail($to,$subject,$content){
-            $key = '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';
+            $key = 'add your send grid API';
 
             $email = new \SendGrid\Mail\Mail();
-            $email->setFrom("info.brytetech@gmail.com", "Bright Bediako");
+            $email->setFrom("youremail@gmail.com", "John");
             $email->setSubject($subject);
             $email->addTo($to);
             $email->addContent("text/plain", $content);
